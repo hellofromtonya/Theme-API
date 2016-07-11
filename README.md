@@ -14,7 +14,8 @@ Currently, if a theme is customized, there is no automatic means for the themer 
 #### Update Request Packet - New Parameter Required
 Within the upgrade request packet, the themer will specify an array of  `customization` parameters in the `hook_extras` parameter.  Currently, the packet is as follows:
 
-`$args = array(
+```
+$args = array(
  	'source'                      => '',
  	'destination'                 => '',
  	'clear_destination'           => false,
@@ -25,11 +26,13 @@ Within the upgrade request packet, the themer will specify an array of  `customi
  		'type'   => 'theme',
  		'action' => 'update',
  	),
- );`
+ );
+ ```
 
 To use a customization folder and preserve it, the themer will add the following new parameters to the `hook_extra` parameter:
 
-` 	'hook_extra'                  => array(
+```
+ 	'hook_extra'                  => array(
  		'theme'  => 'your theme name',
  		'type'   => 'theme',
  		'action' => 'update',
@@ -40,7 +43,8 @@ To use a customization folder and preserve it, the themer will add the following
  			'folder_name' => 'customization', // name of the customization folder
  			'path'        => '', // path to the customization folder
  		),
- 	),`
+ 	),
+```
 
 ## Installation
 
