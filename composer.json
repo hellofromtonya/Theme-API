@@ -1,0 +1,35 @@
+{
+    "name" 			: "hellofromtonya/theme-api",
+    "description" 	: "Theme API - Adds additional, missing functionality for themes",
+    "type"          : "project",
+    "keywords" 		: ["wordpress", "wp", "plugin"],
+    "homepage" 		: "https://hellofromtonya.com",
+    "license" 		: "GPL-2.0+",
+    "authors": [
+        {
+            "name" 	: "hellofromTonya",
+            "email" : "hello@hellofromtonya.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.6.0"
+    },
+    "require-dev": {},
+    "autoload" : {
+        "classmap": [
+            "src/customization/class-upgrader.php"
+        ],
+        "files": [
+            "src/customization/bootstrap.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "vendor-dir": "assets/vendor"
+    },
+    "minimum-stability": "dev"
+}
